@@ -1,0 +1,197 @@
+\documentclass[ngerman,11pt]{article}
+\RequirePackage{latex_basic_head}
+\addbibresource{441.bib}
+\usepackage{geometry}
+\geometry{a4paper,left=1cm,right=1cm,top=1cm,bottom=1.5cm}
+\usepackage{multicol}
+\newcommand{\kin}{\mathrm{kin}}
+\newcommand{\ug}{U_{0}}
+\title{Versuch 441 Weißlichtspektroskopie an Gold-Nanostrukturen}
+\author{Wenjie Wu,~Lars }
+\date{\today}
+\begin{document}
+	\maketitle
+	\begin{abstract}
+
+	\end{abstract}
+	\begin{multicols}{2}
+		\section{Einleitung}
+		Ziel dieses Versuchs ist es, sich mit der Detektion von $\gamma$-Spektrum. Dazu wird zwei Detektoren benutzen: Szintillationsspektrometer und  Halbleiterdetektor.
+		\section{Theorie}
+		\subsection{Radioaktiver Zerfall}
+		Ionisierende Strahlung stammt entweder aus natürlicher Umwelt oder aus künstlichen Strahlungsquellen. Die primäre Strahlung besteht aus massiven geladenen Teilchen oder aus masselosen neutralen Quanten wie Photonen oder Neutrinos. Die Strahlung aus der natürlichen Umwelt stammt aus zwei verschiedenen Quellen: die eine ist die kosmische und solare Teilchenstrahlung, die andere ist die natürliche Radioaktivität. Dabei entsteht $\alpha$-, $\beta$-, oder $\gamma$-Strahlung, die jeweils aus dem radioaktiven Zerfall $\alpha$-, $\beta$-, oder $\gamma$-Zerfall kommt. Überwiegend in diesem Versuch ist der $\gamma$-Zerfall, welche Reaktionsgleichung besagt:
+		\[
+		^A_ZX^*_N\rightarrow ^A_ZX_N+\gamma
+		\] 
+		Die instabile Kerne kann durch mehrere radioaktive Zerfälle in den stabilen Zustand kommen, das ist sogenannte Zerfallsreihen.
+		\subsection{Wechselwirkung von $\gamma$-Photon mit Matrie}
+		Strahlung kann auf verschiedene Arten mit Materie wechselwirken. Folgende Prozesse sind die M\"oglichkeiten:
+		\paragraph{Compton-Effekt} 
+		Nach die Teilchen-Wellen-Dualismus, das Photon kann als Teilchen mit Materie wechselwirken. Bein Compton-Effekt wird das Photon von einem Elektron in der Atom gestreut. Dabei \"ubertr\"agt das Photon einen Teil seiner Energie an das Elektron und die Wellenl\"anger der einfallenden Strahlung vergr\"o\ss ert sich.
+		\paragraph{Photoeffekt}
+		Beim Photoeffekt l\"ost das Photon ein Elektron aus. Das gel\"oste Elektron hat die kinetische Energie von der Energie des Photon. Um das Photoeffekt zu passiert, muss das Photon hat die Energie gr\"o\ss er als die Austrittsarbeit.
+		\paragraph{Paarbildung}
+		Wenn die Energie des Photons gr\"o\ss er als die Ruheenergie eines Elektron-Positron-Paars($e^+$-$e^-$-Paar) ist, kann aus dem Photon ein $e^+$-$e^-$-Paar erzeugen. Damit wird $e^+$-$e^-$-Paar weiter mit Materie(Detektor) wechselwirken, und das Photon existiert nicht mehr.
+		\paragraph{Wirkungsquerschnitt}
+		Die Wirkungsquerschnitten von verschiedener Wechselwirkungen sind nicht gleich. Die Abh\"angigkeit des Wirkungsquerschnittes von der Energie das Photon $E_{\gamma}$ und der Ordnungszahl $Z$ des Absorbermaterials lauten:
+		\begin{center}
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline 
+				Effekte & Proportionalit\"aten \\ 
+				\hline 
+				Compton-Effekt & $\propto ZE_\gamma^{-1}$ \\ 
+				\hline 
+				Photoeffekt & $\propto Z^5E_\gamma^{-\frac{7}{2}}$, für $ E_\gamma<m_ec^2$.\protect \footnotemark[1]\\ 
+				\hline 
+				Paarbildung & $\propto Z^2\ln{E_\gamma}$ \\ 
+				\hline 
+			\end{tabular} 
+		\end{center} 
+	\footnotetext[1]{In diesem Versuch wird nur an diese Bedingung betrachtet.}
+		Die gesamt Wechselwirkung ist die Summe der Wirkungsquerschnitten von verschiedenen Wechselwirkungen. 
+		\subsection{Szintillationsspektrometer und Halbleiterdetektor}
+		Ein Szintillationsspektrometer (Abb. \ref{szintillator})\footnote[2]{\url{https://de.wikibooks.org/wiki/Physikalische_Grundlagen_der_Nuklearmedizin/_Szintillationszähler}} nutzt aus, dass bei einige Materialien Licht entsteht, wenn diese mit Teilchen oder Photonen bestrahlt werden. Mit Hilfe eines Photomultipliers wird dieses Signal in ein elektrisches Signal umgewandelt.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.45\textwidth]{szintillator.png}
+			\caption{Schematischer Aufbau eines Szintillator mit Photomultiplier}
+			\label{szintillator}
+		\end{figure}
+		\paragraph{Szintillator}
+		Hier wird einen anorganischen Szintillator verwendet, in dem die Prozesse durch das Bändermodell beschrieben werden können. Das Elektron wird entweder von der Strahlung vom Valenzband ins Leitungsband angeregt, sodass ein freies Elektron und ein Loch entstehen. Wenn das Elektron ins Valenzband zur\"uckfallen, wird dann Photon emittiert. Die Energiedifferenz zwischen Valenzband und Leitungsband ist zu gro\ss, sodass das emittierte Photon nicht in sichtbar Bereich legen. Wenn das Szintillator mit andere Atom dotiert, gibt es noch Exzitionband zwischen Valenzband und Leitungsband. Wenn das Elektron ins Exzitionband fallen, das emittierte Photon hat ein Wellenl\"ange in sichtbar Bereich. Das emittiert Photon(in sichtbar Bereich) kann durch Photomultiplier detektiert werden.
+		\paragraph{Photomultiplier}
+		Im Photomultiplier treffen die Photonen auf die Photokathode. Hier wird mittels des Photoeffekts ein freies Elektron erzeugt. Diese wird von der Dynode beschleunigt. Beim Auftreffen auf die Dynode überträgt das Elektron seine Energie an andere Elektroden, sodass weitere freie Elektronen entstehen. Dieser Prozess wiederholt sich an jeder Dynode, sodass immer mehr Elektronen beschleunigt werden. Zum Schluss werden alle Elektronen von der Anode aufgenommen und erzeugen einen Strom. 
+		\paragraph{Halbleiterdetektor}
+		Die Halbleiterdetektoren sind meist als dünne Halbleiterplättchen, die einen pn-Übergang enthalten, in der Sperrrichtung ausgebildet. Ionisierende Strahlung erzeugt darin Paare von Elektronen und Löchern, und zwar mit viel geringerem Energieaufwand als für die Ionisierung eines Gasmoleküls. Die im rein p- oder rein n-leitenden Bereich erzeugten Paare rekombinieren bald wieder. In der pn-PBergangsschicht aber werden Elektronen und Löcher durch das dort herrschende starke Raumladungsfeld getrennt. Je größer die äußere Sperrspannung liegt, desto dicker ist die Zone. \cite{gerthsen}
+		Zur Detektion von $\gamma$-Strahlung wird Germanium aufgrund seiner höheren Massenzahl gegenüber Silizium bevorzugt. Wegen der kleineren Bandlücke ist jedoch der Leckstrom in Germanium bei normalen Temperaturen zu hoch, muss den Halbleiterdetektor von flüssigem Stickstoff gekühlt werden. 
+		\paragraph{Vergleich von Szintillations- und Halbleiterdetektor}
+		Die Bandl\"ucke im Halbleiter ist wesentlich kleiner als die im Kristall des Szintillators. Deswegen bietet der Halbleiterdetektor eine h\"ohere Energieaufl\"osung. Das Szintillator kann gro\ss sein. Deswegen kann das Szintillationsdetektor mehr Photon aufnehmen. Beispielhaft wird die
+		 Gamma-Spektroskopie in der Abb. \ref{aufloesung} dargestellt. Man kann deutlich die geringere Energieaufl\"osung des Szintillationsdetektors erkennen.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.45\textwidth]{aufloesung.png}
+			\caption{Gammalinien der beiden Detektoren. \cite{techniques}}
+			\label{aufloesung}
+		\end{figure} 
+		\subsection{Impulshöhenspektrum}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.5\textwidth]{spektrum1.jpg}
+			\caption{Energiespektrum eines Szintillators \cite{teilchen}}
+			\label{spektrum}
+		\end{figure}
+
+		Die Abbildung (\ref{spektrum}) zeigt schematisch das Energiespektrum eines Szintillators. Es lassen sich drei charakteristischen Merkmale erkennen. Diese sind in der Reihenfolge der für den erzeugenden Effekt benötigten Energie aufgezählt.
+		\paragraph{Photopeak}
+		Dieser Peak entsteht durch die Absorption eines Photons und das dadurch emittierte Elektron. Dieses Elektron spiegelt die Gesamtenergie der einfallenden $\gamma$-Strahlung wieder. Dieses Elektron wiederum ionisiert das Szintillator-Material und führt zur Emission eines Photons.
+		\paragraph{Compton-Kante}
+		Die Compton-Kante und das Compton-Kontinuum lassen sich auf die Wechselwirkung zwischen Photon und dem Szintillator durch den Compton-Effekt zurückführen. Bei diesem Effekt gibt das Photon nicht seine gesamte Energie an das Elektron weiter. Dem entsprechend findet man die Compton-Kante bei einer geringeren Energie als den Photopeak. Das Maximum des Compton-Kontinuums befindet sich bei einem Streuwinkel von 180$^\circ$. Dieser sogenannte Rückstreupeak ist in der Abbildung (\ref{spektrum}) allerdings nicht vorhanden.
+		\paragraph{Escape Peaks}
+		Bei diesem Peak ist die Paarbildung von entscheidender Rolle. Das so erzeugte Positron verbindet sich anschließend mit einem Kristall Elektron. Hierbei entstehen zwei Photonen von denen eines (single escape peak) oder beide (double escape peak) vom Detektor registriert werden können.
+		\paragraph{Rückstreupeak}
+		Die Photonen, die durch die Materie ohne Wechselwirkung passieren, werden mit verringerter Energie in den Szintillator zurückgestreut. Trifft das Photon nach einer Streuung um ungefähr 180$^{\circ}$ auf den Photomultiplier, so erzeugt es ein Signal bei $E_{rück}=E_\gamma-E_{max}$.
+
+		\subsubsection{Vielkanalanalysatoren (MCA)}
+
+		Ein Vielkanalanalysator (\textit{Multi Channel Analyzer}) zählt Impulse innerhalb verschiedener Amplitudenintervalle. Die Signale werden mit einem Analog-Digital-Wandler digitalisiert,  die als Adresse eines Speicherplätze fungieren und bei jedem Zugriff den Zählerstand erhöht. Das Ergebnis dieser Zählweise ist ein Histogramm. Durch eine Energiekalibration kann den Kanalen ein Energieintervall zugeordnet und das Histogramm representiert das Energiespektrum. \cite{messelektronik}
+
+		\subsection{Eigenschaften des Detektors}
+
+		\paragraph{Peak-to-Total-Verhältnis}
+		Diese Größe gibt an, welcher Anteil der im Detektor registrierten  $\gamma$-Quanten eines bestimmten Übergangs im Photopeak enthalten sind. Die Definition des Peak-to-Tatal-Verhältnis lautet:
+		\[
+		\dfrac{\text{Anzahl des Ergebnis~im~Photonpeak}}{\text{Gesamtzahl~aller Ergebnisse~im~Spektrum}}
+		\]
+		\paragraph{Absolute Peakeffizienz}
+		Zur Kalibrierung der Effizienz der photoelektrische Umwandlung benötigt die absolute Peakeffizienz: \cite{techniques}
+		\[
+		\dfrac{\text{gesamte Zählrate im Photopeak}}{\text{gesamte Zählrate im Detektor}}
+		\]
+		\textbf{Nachweiswahrscheinlichkeit(Efficiency)}\\
+		Bei der allgemeinen Diskussion werden zwei Arten von Efficiency genannt: Die absolute Nachweiswahrscheinlichkeit $\epsilon$ und die interne Nachweiswahrscheinlichkeit $\epsilon_i$. Die absolute Nachweiswahrscheinlichkeit ist definiert als: \cite{techniques}
+
+		\[
+		\frac{\text{Teilchen im Detektor registriert}}{\text{Teilchen aus Quelle emmitiert}}
+		\]
+
+		\subsection{Termschemata}
+		F\"ur diesen Versuch werden drei verschiedene Quellen verwendet, die Zerfallsschemata werden in Abb.(\ref{fig:coterm})(\ref{fig:csterm}) (\ref{fig:euterm}) dargestellt.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.3\textwidth]{coschema.png}
+			\caption{Termschema des $^{60}$Co-Zerfalls. \protect\footnotemark[1]}
+			\label{fig:coterm}
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.3\textwidth]{csschema.png}
+			\caption{Termschema des $^{137}$Cs-Zerfalls. \protect\footnotemark[2]}
+			\label{fig:csterm}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.3\textwidth]{euterm.png}
+			\caption{Termschema des $^{152}$Eu-Zerfalls\cite{kern}}
+			\label{fig:euterm}
+		\end{figure}
+
+		\footnotetext[1]{\url{https://de.wikipedia.org/wiki/Zerfallsschema}}
+		\footnotetext[2]{\url{http://archive.is/XAO5R}}
+		\section{Aufbau}
+		Der Versuchsaufbau wird in Abb.[fig] dargestellt. Die wesentlischen verwendeten Bauteile waren die Detektoren mit Vorverst\"arker, der Hauptverst\"arker und der Computer mit der Software MCDWIN. Man kann die Detektoren w\"ahlen. Es gab zwei verschiedene Detektoren: Germanium-Detektor(Halbleiterdetektor) und Szintillationsdetektor. Die Probe befand sich im Abstand $d$ zum Detektor.
+		\section{Durchf\"uhrung}
+		[wait lars]
+		\section{Auswertung}
+		Da wir beides alleine diese Versuche durchgef\"uhrt haben, werden beide Datenmenge in der Auswertung bearbeiten. Man kann die Ergebnissen vergleichen, und die Unterschied diskutieren. 
+
+
+
+
+
+
+
+	\end{multicols}
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		Quelle & \multicolumn{2}{|c|}{$^{152}\mathrm{Eu}$}&\multicolumn{2}{|c|}{$^{60}\mathrm{Co}$}&\multicolumn{2}{|c|}{$^{137}\mathrm{Cs}$}\\ \hline
+		Detektor& $d$/cm & $t$/s& $d$/cm & $t$/s& $d$/cm & $t$/s\\ \hline
+		Szintillator & $5,3\pm0,5$ & $601.059 \pm0.0005$ & $5,5\pm 0,5$ & $613.322\pm0.0005$ & $5,5\pm0,5$ & $600.479 \pm0.0005$\\ \hline
+		Halbleiter & $1.5\pm0,5$ & $608.734\pm 0.0005$ & $4,0\pm 0,5$ & $604.075\pm 0.0005$ & $4,5\pm0,5$ &$589.719 \pm 0.0005$ \\ \hline
+	\end{tabular}
+	\caption{Messung Wenjie: Abst\"ande $d$ zwischen Mittelpunkt der Quelle und den Detektoren und die  jeweilligen Messdauern $t$.}
+\end{table}
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		Quelle & \multicolumn{2}{|c|}{$^{152}\mathrm{Eu}$}&\multicolumn{2}{|c|}{$^{60}\mathrm{Co}$}&\multicolumn{2}{|c|}{$^{137}\mathrm{Cs}$}\\ \hline
+		Detektor& $d$/cm & $t$/s& $d$/cm & $t$/s& $d$/cm & $t$/s\\ \hline
+		Szintillator & $5,3\pm0,5$ & & $5,5\pm 0,5$ & & $5,5\pm0,5$ & \\ \hline
+		Halbleiter & $1.5\pm0,5$ & & $4,0\pm 0,5$ & & $4,5\pm0,5$ & \\ \hline
+	\end{tabular}
+	\caption{Messung Lars: Abst\"ande $d$ zwischen Mittelpunkt der Quelle und den Detektoren und die jeweilligen Messdauern $t$.}
+\end{table}
+\newpage
+\begin{thebibliography}{9}
+
+	\bibitem[detektor]{detektor} Kleinknecht, Konrad, \textit{Detektoren für Teilchenstrahlung}, B.G. Teubnerer Stuttgart, 1992, 19ff.
+
+	\bibitem[techniques]{techniques} Leo, W.R., \textit{Techniques for Nuclear and Particle Physics Experiments}, Springer Verlag, 1994, 113, 157ff.,177ff.,192, 204ff., 313f.
+
+	\bibitem[gerthsen]{gerthsen} Meschede, D., \textit{Gerthsen Physik}, Springer Verlag, 2004, 464-465,672-673,841
+
+	\bibitem[messelektronik]{messelektronik} Schmidt, H.U., \textit{Meßelektronik in der Kernphysik}, Teubner Verlag, 1986, 21,28,38,79-80,106-107,110,119-120,184-185
+
+	\bibitem[teilchen]{teilchen} Kolanoski, H., \textit{Teilchendetektoren: Grundlagen und Anwendungen}, Springer Spektrum, 2016, 524
+
+	\bibitem[kern]{kern} Amsler, Claude, \textit{Kern- und Teilchenphysik}, Zürich: Vdf-Hochschulverl., 2007, 238
+\end{thebibliography}
+
+%\nocite{*}
+%\printbibliography		
+\end{document}
