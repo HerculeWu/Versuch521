@@ -100,7 +100,7 @@
 		\subsection{Eigenschaften des Detektors}
 
 		\paragraph{Peak-to-Total-Verhältnis}
-		Diese Größe gibt an, welcher Anteil der im Detektor registrierten  $\gamma$-Quanten eines bestimmten Übergangs im Photopeak enthalten sind. Die Definition des Peak-to-Tatal-Verhältnis lautet:
+		Diese Größe gibt an, welcher Anteil der im Detektor registrierten  $\gamma$-Quanten eines bestimmten Übergangs im Photopeak enthalten sind. Die Definition des Peak-to-Total-Verhältnis lautet:
 		\[
 		\dfrac{\text{Anzahl des Ergebnis~im~Photonpeak}}{\text{Gesamtzahl~aller Ergebnisse~im~Spektrum}}
 		\]
@@ -202,6 +202,27 @@
 	 	\label{fig:halbwertfit}
 	 \end{figure}
  	 Die Ergebnis ist $c = 0,068\pm0,001$ und $\Delta E_e = (-0.607\pm1.881)\mathrm{Kanal}$. Das Fehler von $\Delta E_e$ ist sehr gro\ss. Es kann sein, dass es Rauschen in unsere Messung gibt, oder $\Delta E_e$ hat noch andere Abh\"angigkeit, z.B. von Temperatur oder Verst\"arkung, und diese Parametern ver\"andert wahrend Messung.
+	 \subsection{Peak-to-Total-Verh\"altnis}
+	 Um das Peak-to-Total-Verh\"altnis zu bestimmen, muss man die Anzahl der im Photopeak registrierten Gammaquanten berechnen nach
+	 $$
+	 A_{ph} = \sqrt{2*\pi}A\sigma.
+	 $$
+	 Man muss noch das R\"uckstreuanteil im Niederenergiebereich ber\"ucksichtigen. Dazu wird Gau\ss-Kurve-Anpassung und daraus die Anzahl der Gammaquanten bestimmt. Am Ende kann man das Verh\"altnis berechnen nach:
+	 $$
+	 PT = \frac{A_{ph}}{N_{tot}-N_{rck}}
+	 $$
+	 F\"ur Cs wird 663keV-Linie verwendet und f\"ur Co wird die mittlere Energie der beiden Linien (~1250KeV) verwendet. Daraus ergibt sich die Peak-to-Total-Verh\"altnis
+	 \begin{center}
+	 	\begin{tabular}{|c|c|c|c|}
+	 		\hline
+	 		Detektor&Element & Peak-to-Total/\% &Fehler/\%\\ \hline
+	 		Szintillator& Co & 42.21 & 0.52\\ \hline
+	 		Szintillator& Cs & 45.06 & 0.21\\ \hline
+	 		Ge-Detektor& Co & 12.11 & 0. 15\\ \hline
+	 		Ge-Detektor& Cs & 19.01 & 0.19\\ \hline
+	 	\end{tabular}
+	 \end{center}
+ 	Das Peak-to-Total-Verh\"altnis ist f\"ur den Szintillator h\"oher als f\"ur den Halbleiterdetektor. Das Grund daf\"ur ist, dass der Wirkungsquerschnitt proportional zu $Z^5$ ist. F\"ur Ge ist $Z = 32$ und f\"ur Jod(Szintillator) ist $Z = 53$. Wegen die Cs-Linie eine geringe Energie besitzt ist hier der Wirkungsquerschnitt gr\"o\ss er und somit das Peak-to-Total.
 	 
 
 
@@ -232,8 +253,8 @@
 
 
 
-
 	\end{multicols}
+\newpage
 \begin{table}
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|}
