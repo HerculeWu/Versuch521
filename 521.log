@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.5.20)  24 JUN 2020 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.5.20)  24 JUN 2020 15:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1321,7 +1321,11 @@ LaTeX Font Info:    Trying to load font information for OT1+txtt on input line
 File: ot1txtt.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 16.41594pt on input line 14.
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
 (Font)              scaled to size 11.39996pt on input line 14.
+LaTeX Font Info:    Font shape `OT1/txss/m/n' will be
+(Font)              scaled to size 9.49997pt on input line 14.
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <10> not available
 (Font)              Font shape `T1/txr/bx/n' tried instead on input line 14.
 LaTeX Font Info:    Font shape `T1/txr/b/n' in size <14.4> not available
@@ -1503,11 +1507,11 @@ Package logreq Info: Writing requests to '521.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31472 strings out of 480476
- 593454 string characters out of 5903481
- 1265536 words of memory out of 5000000
- 46869 multiletter control sequences out of 15000+600000
- 600120 words of font info for 141 fonts, out of 8000000 for 9000
+ 31498 strings out of 480476
+ 593855 string characters out of 5903481
+ 1265552 words of memory out of 5000000
+ 46893 multiletter control sequences out of 15000+600000
+ 610030 words of font info for 167 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  68i,11n,64p,839b,2193s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texm
@@ -1519,7 +1523,7 @@ texlive/2020/texmf-dist/fonts/type1/public/txfonts/txex.pfb><c:/texlive/2020/te
 xmf-dist/fonts/type1/public/txfonts/txsy.pfb><c:/texlive/2020/texmf-dist/fonts/
 type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on 521.pdf (9 pages, 2027665 bytes).
+Output written on 521.pdf (9 pages, 2027687 bytes).
 PDF statistics:
  266 PDF objects out of 1000 (max. 8388607)
  218 compressed objects within 3 object streams
