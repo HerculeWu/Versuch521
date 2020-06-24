@@ -185,7 +185,24 @@
 	Die Fehlern ist nach Gau\ss-Fehlerfortpflanzen $\Delta\mathrm{FWHM} = 2\cdot\Delta\mathrm{HWHM}$. Aus der Halbwertbreite und der jeweiligen Energie der Linie kann man die Energieaufl\"osung bestimmen:
 	$$ \text{Aufl\"osung}=\frac{\mathrm{FWHM}}{E} $$ Die Ergebnissen werden in Tabelle (\ref{tab:auflosung}) dargestellt. Man kann sehen, dass die Aufl\"osungen von Halbleiterdetektor ist deutlich kleiner (immer unter 10\%) als Szintillator (gr\"o\ss er als 20\%).
 	\subsection{Intrinsische Halbwertsbreite des Ge-Detektors}
-	
+	 Die Halbwertbreite des Halbleiterdetektors ($\Delta E(E_\gamma)$) besteht aus einem intrinsischen und einem elektronischen Anteil ($\Delta E(E_\gamma)$ und $\Delta E_e$, wobei hier $E_\gamma$ ist die Energie des Photons):
+	 $$
+	 \Delta E(E_\gamma) = \sqrt{ (\Delta E(E_\gamma))^2 + \Delta E_e^2 }
+	 $$
+	 Der intrinsische Anteil basiert auf den statistischen Prozessen der Ladungssammlung im Ge-Kristall. Deswegen ist es abh\"angig von der Energie des Photons. Die elektronische Anteil basiert auf der Rauschen in elektronische Schaltung. Die theoretische Analyse ergibt eine N\"aherung von intrinsische Anteil:
+	 $$ \Delta E(E_\gamma) = \sqrt{c}\cdot\sqrt{E_\gamma} $$
+	 wobei $c$ ist eine Konstant.
+	 Um diese Zusammenhang zu \"uberpr\"ufung, wir tragen die Quadrat von beide Seit:
+	 $$ \Delta E^2 = c\cdot E_\gamma + \Delta E_e^2 $$
+	 dann f\"uhren wir eine Geradenanpassung ($E_\gamma$ gegen $\Delta E$), die Steigung ist dann $c$ und $\Delta E_e^2$ ist Abschnitt. Hier benutzen wir  $\Delta E$ und $E_\gamma$ in Einheit von Kanal (dann ist $\Delta E$ FWHM und $E_\gamma$ ist $\mu$) und $\Delta E_e^2$ wird auch in Einheit von Kanal bestimmt. Man kann immer durch Gleichung (\ref{eq: energiekanal}) das Einheit zu keV umwandeln. 
+	 \begin{figure}[H]
+	 	\centering
+	 	\includegraphics[width=0.45\textwidth]{Halbwertfit.png}
+	 	\caption{Quadrat der Halbwertsbreite des Ge-Detektors in Abh\"angigkeit von der Gammaenergie in Einheit Kanal.}
+	 	\label{fig:halbwertfit}
+	 \end{figure}
+ 	 Die Ergebnis ist $c = 0,068\pm0,001$ und $\Delta E_e = (-0.607\pm1.881)\mathrm{Kanal}$. Das Fehler von $\Delta E_e$ ist sehr gro\ss. Es kann sein, dass es Rauschen in unsere Messung gibt, oder $\Delta E_e$ hat noch andere Abh\"angigkeit, z.B. von Temperatur oder Verst\"arkung, und diese Parametern ver\"andert wahrend Messung.
+	 
 
 
 
