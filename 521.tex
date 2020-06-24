@@ -223,7 +223,27 @@
 	 	\end{tabular}
 	 \end{center}
  	Das Peak-to-Total-Verh\"altnis ist f\"ur den Szintillator h\"oher als f\"ur den Halbleiterdetektor. Das Grund daf\"ur ist, dass der Wirkungsquerschnitt proportional zu $Z^5$ ist. F\"ur Ge ist $Z = 32$ und f\"ur Jod(Szintillator) ist $Z = 53$. Wegen die Cs-Linie eine geringe Energie besitzt ist hier der Wirkungsquerschnitt gr\"o\ss er und somit das Peak-to-Total.
-	 
+	\subsection{Absolute Peakeffizienz}
+	Die absolute Peakeffizienz ergibt sich, welcher Anteil aller von der Quelle ausgesendeten Gammaquanten eines \"Ubergangs im Photopeak registriert wurden. Dazu muss die in der Messzeit entsendete Anzahl der Gammaquanten der Quelle berechnet werden. Hierzu kann die Aktivit\"at zum Zeitpunkt der Versuchsdurchf\"uhrung berechnet werden nach:
+	$$ \tilde{A} = \tilde{A}_0\exp\left( \frac{\ln(2)}{T_{1/2}}t \right) $$
+	Die Aktivit\"at der Quelle betrug im April 1985 25$\mu$Ci. Somit ergibt sich eine Aktivit\"at von (430713$\pm$657) Bq zum Zeitpunkt der Versuchsdurchf\"uhrung. Man muss noch die Wahrscheinlichkeit des zu untersuchenden \"Ubergangs ber\"ucksichtigt. Dann ist die benutzte Aktivit\"at (347110$\pm$544)Bq. Der Fehler stammt aus der Annahme, dass die Zerfall ein Poission-Prozess ist. Die Quelle strahlt isotrop in alle Raumrichtungen. Der Anteil der Strahlung soll mit Raumwinkel des Detektors $\Omega = \pi r^2/d^2$ berechnet werden, wobei $r$ ist der Durchmesser des Detektors und $d$ ist der Abstand zwischen Quelle und Detektor. Dann ist die Anzahl der Gammaquanten, der auf Detektor erreichen, gegeben durch:
+	$$ N = \tilde{A}\cdot t_{Messung}\cdot\frac{r^2}{4d^2} $$
+	Und die absolute Peakeffizienz ist $A_{ph}/N$. Daraus ist die absolute Peakeffizienz f\"ur Szintillator (1.877$\pm$0.003)\% und (1.046$\pm$0.001)\% f\"ur Ge-Detektor. Die absolute Peakeffizienz des Szintillator ist h\"oher als die des Ge-Detektors, da das Szintillator mehr Photonen aufnehmen kann.
+	\subsection{Relative Effizienz als  Funktiron der Gammaenergie}
+	Zur Bestimmung die Effizienz in Abh\"angigkeit zur Gammaenergie werden die Intensit\"aten der Linien im Eu-Spektrum normiert. Dabei nehmen wir an, dass die Intensit\"at von 1408keV-Linie ist 1000. Daraus folgt folgende Normierung f\"ur die restlichen Linien:
+	$$ I_{norm}(E_\gamma)=\frac{I(E_\gamma)}{I(1408\mathrm{keV})}\cdot 1000 $$
+	Man soll jetzt aus Praktikumheft die theoretischen relativen Intensit\"aten $I_{th}$ entnehmen (Wir haben diese Tabelle nicht gefunden, die hier benutzt Werten von $I_{th}$ is aus alte Protukoll), dann die relative Effizienz $I_{rel} = I_{norm}/I_{th}$ berechnen. Die Ergebnis sehe Tabelle (\ref{tab:relative}). Man kann weiter $I_{rel}$ gegen Energie tragen, und anpassen mit Funktion:
+	$$ I_{rel} = m\cdot E_\gamma^{-a} + n $$
+	Die Ergebnis zeigt (Abbildung (\ref{fig:relative})) dass $a=0.739\pm0.015$. Es ist nahe zu 1. Man kann daraus sagen, dass der Comptoneffekt bei der Wechselwirkung dominierend war.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.45\textwidth]{relative.png}
+		\caption{Relative Effizienz als Funktion der Gammaenergie}
+		\label{fig:relative}
+	\end{figure}
+	
+	
+	
 
 
 
@@ -355,6 +375,28 @@
 	\end{tabular}
 \caption{Energieaufl\"osung. Hier wird die Halbwertsbreten nicht dargestellt, da man einfach aus HWHM berechnen kann.}
 \label{tab:auflosung}
+\end{table}
+\begin{table}[htbp]
+\centering
+	\begin{tabular}{|r|r|r|r|r|r|}
+		\hline
+		{Energie/keV} &
+		{$I_{norm}$} &
+		{$\Delta I_{norm}$} &
+		{$I_{th}$} &
+		{$\frac{I_{norm}}{I_{th}}$} &
+		{$\Delta\frac{I_{norm}}{I_{th}} $} \\ \hline
+		1408   & 1000      & 22.482  & 1000  & 1      & 0.036 \\ \hline
+		1112.1 & 1003.415  & 20.264  & 649   & 1.546  & 0.06  \\ \hline
+		1085.9 & 780.328   & 17.11   & 475   & 1.643  & 0.051 \\ \hline
+		964.1  & 1331.112  & 39.628  & 693.4 & 1.92   & 0.074 \\ \hline
+		778.9  & 1704.849  & 40.994  & 621.6 & 2.743  & 0.09  \\ \hline
+		344.3  & 11347.117 & 316.825 & 1275  & 8.9    & 0.352 \\ \hline
+		244.7  & 5111.171  & 126.776 & 359   & 14.237 & 0.483 \\ \hline
+		121.8  & 30475.184 & 685.504 & 1362  & 22.375 & 0.779 \\ \hline
+	\end{tabular}
+\caption{Relative Effizienz des Ge-Detektors.}
+\label{tab:relative}
 \end{table}
 \newpage
 \begin{thebibliography}{9}
