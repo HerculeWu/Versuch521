@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.5.20)  23 JUN 2020 16:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.5.20)  24 JUN 2020 11:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1358,7 +1358,7 @@ LaTeX Font Info:    Trying to load font information for T1+txtt on input line 5
 (c:/texlive/2020/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
-<figs/szintillator.png, id=58, 752.8125pt x 314.17375pt>
+<figs/szintillator.png, id=66, 752.8125pt x 314.17375pt>
 File: figs/szintillator.png Graphic file (type png)
 <use figs/szintillator.png>
 Package pdftex.def Info: figs/szintillator.png  used on input line 57.
@@ -1374,7 +1374,7 @@ Package multicol Warning: I moved some lines to the next page.
 
 LaTeX Warning: Citation 'gerthsen' on page 2 undefined on input line 66.
 
-<figs/aufloesung.png, id=80, 410.53375pt x 268.00125pt>
+<figs/aufloesung.png, id=88, 410.53375pt x 268.00125pt>
 File: figs/aufloesung.png Graphic file (type png)
 <use figs/aufloesung.png>
 Package pdftex.def Info: figs/aufloesung.png  used on input line 73.
@@ -1390,7 +1390,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--74
 []\T1/txr/m/n/10.95 Abbildung 2: Gam-ma-li-ni-en der bei-den De-tek-to-ren.
  []
 
-<figs/spektrum1.jpg, id=81, 1631.09375pt x 1195.46625pt>
+<figs/spektrum1.jpg, id=89, 1631.09375pt x 1195.46625pt>
 File: figs/spektrum1.jpg Graphic file (type jpg)
 <use figs/spektrum1.jpg>
 Package pdftex.def Info: figs/spektrum1.jpg  used on input line 81.
@@ -1417,17 +1417,17 @@ LaTeX Warning: Citation 'techniques' on page 3 undefined on input line 108.
 
 LaTeX Warning: Citation 'techniques' on page 3 undefined on input line 113.
 
-<figs/coschema.png, id=101, 321.2pt x 290.58563pt>
+<figs/coschema.png, id=109, 321.2pt x 290.58563pt>
 File: figs/coschema.png Graphic file (type png)
 <use figs/coschema.png>
 Package pdftex.def Info: figs/coschema.png  used on input line 123.
 (pdftex.def)             Requested size: 162.18236pt x 146.72906pt.
-<figs/csschema.png, id=102, 208.78pt x 161.60374pt>
+<figs/csschema.png, id=110, 208.78pt x 161.60374pt>
 File: figs/csschema.png Graphic file (type png)
 <use figs/csschema.png>
 Package pdftex.def Info: figs/csschema.png  used on input line 129.
 (pdftex.def)             Requested size: 162.18236pt x 125.54243pt.
-<figs/euterm.png, id=103, 234.8775pt x 183.68625pt>
+<figs/euterm.png, id=111, 234.8775pt x 183.68625pt>
 File: figs/euterm.png Graphic file (type png)
 <use figs/euterm.png>
 Package pdftex.def Info: figs/euterm.png  used on input line 136.
@@ -1440,22 +1440,45 @@ Package multicol Warning: I moved some lines to the next page.
 (multicol)                Footnotes on page 3 might be wrong on input line 147.
 
 
-[3 <./figs/coschema.png> <./figs/csschema.png> <./figs/euterm.png>] [4]
-Underfull \hbox (badness 1852) in paragraph at lines 184--185
+[3 <./figs/coschema.png> <./figs/csschema.png> <./figs/euterm.png>]
+<figs/Szfit.png, id=133, 722.7pt x 446.6286pt>
+File: figs/Szfit.png Graphic file (type png)
+<use figs/Szfit.png>
+Package pdftex.def Info: figs/Szfit.png  used on input line 161.
+(pdftex.def)             Requested size: 243.26941pt x 150.33878pt.
+<figs/Gefit.png, id=134, 722.7pt x 446.6286pt>
+File: figs/Gefit.png Graphic file (type png)
+<use figs/Gefit.png>
+Package pdftex.def Info: figs/Gefit.png  used on input line 167.
+(pdftex.def)             Requested size: 243.26941pt x 150.33878pt.
+<figs/spektrumminusunter.png, id=136, 867.24pt x 1022.04234pt>
+File: figs/spektrumminusunter.png Graphic file (type png)
+<use figs/spektrumminusunter.png>
+Package pdftex.def Info: figs/spektrumminusunter.png  used on input line 291.
+(pdftex.def)             Requested size: 540.60239pt x 637.12183pt.
+ [4 <./figs/Szfit.png> <./figs/Gefit.png>] [5] [6 <./figs/spektrumminusunter.pn
+g>]
+Underfull \hbox (badness 1852) in paragraph at lines 326--327
 []\T1/txr/m/n/10.95 Leo, W.R., \T1/txr/m/it/10.95 Tech-ni-ques for Nucle-ar and
  Par-tic-le Phy-sics Ex-pe-ri-ments\T1/txr/m/n/10.95 , Sprin-ger Ver-lag, 1994,
  113,
  []
 
-[5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 197.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 197.
+[7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 339.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 339.
  (./521.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 197.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 197.
-Package rerunfilecheck Info: File `521.out' has not changed.
-(rerunfilecheck)             Checksum: 9A8ED4872C26FD662DD5AAFA20BB6BAE;775.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 339.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 339.
 
+
+Package rerunfilecheck Warning: File `521.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `521.out':
+(rerunfilecheck)             Before: 7FD9034D09731AB9D60D74425937E621;909
+(rerunfilecheck)             After:  14EEDFA53ADF05FF85504768726ABE48;1004.
 
 LaTeX Warning: There were undefined references.
 
@@ -1469,10 +1492,10 @@ Package logreq Info: Writing requests to '521.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31394 strings out of 480476
- 592239 string characters out of 5903481
- 1253654 words of memory out of 5000000
- 46819 multiletter control sequences out of 15000+600000
+ 31436 strings out of 480476
+ 592876 string characters out of 5903481
+ 1270236 words of memory out of 5000000
+ 46846 multiletter control sequences out of 15000+600000
  598744 words of font info for 139 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  68i,11n,64p,839b,2193s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1480,14 +1503,14 @@ Here is how much of TeX's memory you used:
 f-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/texlive/2020/texmf-dist/fonts/ty
 pe1/public/txfonts/rtxmi.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/txf
 onts/rtxr.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb>
-<c:/texlive/2020/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><c:/texlive/202
-0/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/u
-tmri8a.pfb>
-Output written on 521.pdf (5 pages, 551111 bytes).
+<c:/texlive/2020/texmf-dist/fonts/type1/public/txfonts/txex.pfb><c:/texlive/202
+0/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><c:/texlive/2020/texmf-dist/fo
+nts/type1/urw/times/utmb8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/time
+s/utmr8a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on 521.pdf (7 pages, 1613218 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 139 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 215 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 170 words of extra memory for PDF output out of 10000 (max. 10000000)
 

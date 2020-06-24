@@ -145,7 +145,70 @@
 		\section{Durchf\"uhrung}
 		[wait lars]
 		\section{Auswertung}
-		Da wir beides alleine diese Versuche durchgef\"uhrt haben, werden beide Datenmenge in der Auswertung bearbeiten. Man kann die Ergebnissen vergleichen, und die Unterschied diskutieren. 
+		\subsection{Energiekalibrierung}
+		Als erstes wurde nun eine Energiekalibrierung beider Detektoren vorgenommen. Dazu werde die Spektren von verschiedene Quellen und Detektoren minus die Untergrunde angetragen (siehe Abbildung (\ref{fig:spektrummunusunter})). Die Fehlers werden berechnet durch Gau\ss-Fehlerfortpflanzen. Dann werden verschiedene bekannte Energielinien mit Hilfe von Gau\ss-Kurven an die Daten angepasst:
+		$$
+		f(x) = A\cdot\exp\left( -\ln(2)\cdot\frac{(x-\mu)^2}{\mathrm{HWHM}^2} \right)
+		$$
+		$A$ ist die Amplitude der Kurve, $\mu$ ist der Mittelwert und HWHM ist half Bereite am half Maximum (also HWHM = $\sqrt{2\ln2}\sigma$, mit Standortabweichung $\sigma$ ). Diese Kurve ist kein klassische Gau\ss-Kurve, aber mit HWHM kann man einfach FWHM bestimmen, das ist f\"ur weitere Auswertung gut. Die Ergebnissen f\"ur diese Kurve-Anpassung siehe Tabelle (\ref{tab:gefit}) und (\ref{tab:szfit}). Anschlie\ss lich tragen wir Energie gegen $\mu$ und f\"uhren eine Gerade-Anpassung (siehe Abbildung (\ref{fig:gefit}) und (\ref{fig:szfit}) ), dann die Energie kann durch die Funktion:
+		\begin{equation}\label{eq: energiekanal}
+			\mathrm{Energie} = a\cdot\mathrm{Kanal}+b
+		\end{equation}
+		aus Kanal berechnen.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.45\textwidth]{Szfit.png}
+			\caption{Geradenanpassung von Szintillationsdetektor zur Energiekalibration}
+			\label{fig:szfit}
+		\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.45\textwidth]{Gefit.png}
+		\caption{Geradenanpassung von Ge-Detektor zur Energiekalibration}
+		\label{fig:gefit}
+	\end{figure}
+	Die Ergebnissen und deren Fehler sind:
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Detektor& Szintillator & Halbleiterdetektor\\ \hline
+			$a$/(keV/Kanal) & 0.272&0.185\\ \hline
+			$\Delta a$/(keV/Kanal) & 0.005&0.006\\ \hline
+			$b$/(keV/Kanal) &  88.728 &5.558\\ \hline
+			$\Delta b$/(keV/Kanal)&1.998&0.145\\ \hline
+		\end{tabular}
+	\end{center}
+	\subsection{Halbwertsbreite}
+	Die Halbwertsbreite kann nach HWHM bestimmen:
+	$$ \mathrm{FWHM} = 2\cdot\mathrm{HWHM} $$
+	Die Fehlern ist nach Gau\ss-Fehlerfortpflanzen $\Delta\mathrm{FWHM} = 2\cdot\Delta\mathrm{HWHM}$. Aus der Halbwertbreite und der jeweiligen Energie der Linie kann man die Energieaufl\"osung bestimmen:
+	$$ \text{Aufl\"osung}=\frac{\mathrm{FWHM}}{E} $$ Die Ergebnissen werden in Tabelle (\ref{tab:auflosung}) dargestellt. Man kann sehen, dass die Aufl\"osungen von Halbleiterdetektor ist deutlich kleiner (immer unter 10\%) als Szintillator (gr\"o\ss er als 20\%).
+	\subsection{Intrinsische Halbwertsbreite des Ge-Detektors}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -163,7 +226,7 @@
 		Szintillator & $5,3\pm0,5$ & $601.059 \pm0.0005$ & $5,5\pm 0,5$ & $613.322\pm0.0005$ & $5,5\pm0,5$ & $600.479 \pm0.0005$\\ \hline
 		Halbleiter & $1.5\pm0,5$ & $608.734\pm 0.0005$ & $4,0\pm 0,5$ & $604.075\pm 0.0005$ & $4,5\pm0,5$ &$589.719 \pm 0.0005$ \\ \hline
 	\end{tabular}
-	\caption{Messung Wenjie: Abst\"ande $d$ zwischen Mittelpunkt der Quelle und den Detektoren und die  jeweilligen Messdauern $t$.}
+	\caption{Messung W: Abst\"ande $d$ zwischen Mittelpunkt der Quelle und den Detektoren und die  jeweilligen Messdauern $t$.}
 \end{table}
 \begin{table}
 	\centering
@@ -174,7 +237,86 @@
 		Szintillator & $5,3\pm0,5$ & & $5,5\pm 0,5$ & & $5,5\pm0,5$ & \\ \hline
 		Halbleiter & $1.5\pm0,5$ & & $4,0\pm 0,5$ & & $4,5\pm0,5$ & \\ \hline
 	\end{tabular}
-	\caption{Messung Lars: Abst\"ande $d$ zwischen Mittelpunkt der Quelle und den Detektoren und die jeweilligen Messdauern $t$.}
+	\caption{Messung L: Abst\"ande $d$ zwischen Mittelpunkt der Quelle und den Detektoren und die jeweilligen Messdauern $t$.}
+\end{table}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		Element & {Energie/keV} & {$A$} & {$\Delta A$} & {$\mu$} &{$\Delta mu$} & {$\sigma$} & \multicolumn{1}{l}{$\Delta \sigma$} \\\hline
+		Co      & 1173.2                          & 3084.807                & 100.381                        & 6567.571                  & 78.482                          & 6.62                         & 0.126                               \\\hline
+		Co      & 1332.5                          & 2500.892                & 99.776                         & 7462.482                  & 91.305                          & 7.147                        & 0.106                               \\\hline
+		Cs      & 661.7                           & 56518.83                & 2021.929                       & 3524.197                  & 68.452                          & 6.808                        & 0.075                               \\\hline
+		Eu      & 1408                            & 4025.367                & 130.023                        & 7530.873                  & 103.757                         & 11.863                       & 0.122                               \\\hline
+		Eu      & 1112.1                          & 4039.113                & 121.73                         & 5941.807                  & 73.945                          & 10.389                       & 0.162                               \\\hline
+		Eu      & 1085.9                          & 3141.106                & 118.467                        & 5801.954                  & 99.248                          & 11.48                        & 0.139                               \\\hline
+		Eu      & 964.1                           & 5358.213                & 198.316                        & 5147.464                  & 95.308                          & 9.207                        & 0.092                               \\\hline
+		Eu      & 778.9                           & 6862.642                & 250.076                        & 4153.157                  & 60.589                          & 7.823                        & 0.086                               \\ \hline
+		Eu      & 344.3                           & 45676.31                & 1418.568                       & 1823.311                  & 28.749                          & 4.925                        & 0.083                               \\ \hline
+		Eu      & 244.7                           & 20574.34                & 750.483                        & 1290.334                  & 16.082                          & 4.648                        & 0.061                               \\ \hline
+		Eu      & 121.8                           & 122673.8                & 4291.804                       & 631.824                   & 11.704                          & 3.631                        & 0.038                           \\ \hline   
+	\end{tabular}
+	\caption{Ergebnis von Gau\ss-Kurven-Anpassung f\"ur die Spektren des Halbleiterdetektors.}
+	\label{tab:gefit}
+\end{table}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|l|r|r|r|r|r|r|r|}
+		\hline
+		Element &
+		{Energie/keV} &
+		{$A$} &
+		{$\Delta A$} &
+		{$\mu$} &
+		{$\Delta mu$} &
+		{$\sigma$} &
+		{$\Delta \sigma$} \\ \hline
+		Co & 1173.2 & 97.334   & 3.353    & 4597.38  & 50.158 & 150.74  & 2.604 \\ \hline
+		Co & 1332.5 & 76.43    & 2.644    & 5225.95  & 65.186 & 147.238 & 1.678 \\ \hline
+		Cs & 661.7  & 3376.521 & 134.099  & 2608.751 & 34.898 & 103.564 & 1.649 \\ \hline
+		Eu & 1112.1 & 780.083  & 26.87    & 4352.501 & 85.235 & 179.351 & 1.829 \\ \hline
+		Eu & 1408   & 373.767  & 12.565   & 5566.75  & 82.859 & 164.062 & 2.47  \\ \hline
+		Eu & 1085.9 & 676.632  & 25.912   & 3816.279 & 47.024 & 166.179 & 1.723 \\ \hline
+		Eu & 964.1  & 1014.79  & 35.044   & 3088.018 & 54.518 & 156.29  & 1.841 \\ \hline
+		Eu & 778.9  & 5993.97  & 189.316  & 1355.607 & 14.089 & 87.869  & 1.309 \\ \hline
+		Eu & 344.3  & 4679.29  & 172.217  & 947.093  & 11.884 & 78.436  & 0.794 \\ \hline
+		Eu & 244.7  & 26858.79 & 891.59   & 474.656  & 6.97   & 32.993  & 0.403 \\ \hline
+		Eu & 121.8  & 59778.7  & 2142.021 & 132.717  & 2.442  & 21.546  & 0.239 \\ \hline
+	\end{tabular}
+	\caption{Ergebnis von Gau\ss-Kurven-Anpassung f\"ur die Spektren des Szintillationsdetektros.}
+	\label{tab:szfit}
+\end{table}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{spektrumminusunter.png}
+	\caption{Spektren ohne Untergrunde}
+	\label{fig:spektrummunusunter}
+\end{figure}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		&
+		\multicolumn{2}{c|}{Szintillator} &
+		\multicolumn{2}{c|}{Halbleiterdetektor} \\ \hline
+		& {Aufl"osung/\%} &
+		{$\Delta$Aufl"osung/\%} &
+		{Aufl"osung/\%} &
+		{$\Delta$Aufl"osung/\%} \\ \hline
+		Co & 25.7  & 0.47 & 1.13 & 0.02 \\ \hline
+		Co & 22.1  & 0.3  & 1.07 & 0.02 \\ \hline
+		Cs & 31.3  & 0.45 & 2.06 & 0.04 \\ \hline
+		Eu & 32.25 & 0.51 & 1.69 & 0.02 \\ \hline
+		Eu & 23.3  & 0.34 & 1.87 & 0.02 \\ \hline
+		Eu & 30.61 & 0.42 & 2.11 & 0.03 \\ \hline
+		Eu & 32.42 & 0.63 & 1.91 & 0.03 \\ \hline
+		Eu & 22.56 & 0.4  & 2.01 & 0.02 \\ \hline
+		Eu & 45.56 & 0.69 & 2.86 & 0.04 \\ \hline
+		Eu & 26.97 & 0.4  & 3.8  & 0.04 \\ \hline
+		Eu & 35.38 & 0.42 & 5.96 & 0.06 \\ \hline
+	\end{tabular}
+\caption{Energieaufl\"osung. Hier wird die Halbwertsbreten nicht dargestellt, da man einfach aus HWHM berechnen kann.}
+\label{tab:auflosung}
 \end{table}
 \newpage
 \begin{thebibliography}{9}
